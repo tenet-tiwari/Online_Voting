@@ -14,7 +14,7 @@ const ElectionDetails = () => {
     const fetchData = async () => {
       try {
         // Fetch all elections
-        const electionsResponse = await fetch('http://localhost:5000/api/election');
+        const electionsResponse = await fetch('https://online-voting-ulpa.onrender.com/api/election');
         if (!electionsResponse.ok) {
           throw new Error('Failed to fetch elections');
         }
@@ -22,7 +22,7 @@ const ElectionDetails = () => {
         
 
         // Fetch all candidates
-        const candidatesResponse = await fetch('http://localhost:5000/api/candidate');
+        const candidatesResponse = await fetch('https://online-voting-ulpa.onrender.com/api/candidate');
         if (!candidatesResponse.ok) {
           throw new Error('Failed to fetch candidates');
         }

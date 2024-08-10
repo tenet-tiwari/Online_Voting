@@ -20,7 +20,7 @@ const AddCandidatePage = () => {
   useEffect(() => {
     const fetchElections = async () => {
       try {
-        const response = await fetch('http://localhost:5000/api/election');
+        const response = await fetch('https://online-voting-ulpa.onrender.com/api/election');
         const data = await response.json();
         //console.log(data);
         setElections(data);
@@ -67,7 +67,7 @@ const AddCandidatePage = () => {
 
     try {
       const token = localStorage.getItem('token'); // Assuming the token is stored in localStorage
-      const response = await fetch('http://localhost:5000/api/candidate/add', {
+      const response = await fetch('https://online-voting-ulpa.onrender.com/api/candidate/add', {
         method: 'POST',
         headers: {
           Authorization: `Bearer ${token}`, // Include the token in the Authorization header

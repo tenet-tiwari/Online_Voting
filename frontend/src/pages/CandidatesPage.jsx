@@ -15,8 +15,8 @@ const CandidatesPage = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const electionResponse = await fetch('http://localhost:5000/api/election');
-        const candidateResponse = await fetch('http://localhost:5000/api/candidate');
+        const electionResponse = await fetch('https://online-voting-ulpa.onrender.com/api/election');
+        const candidateResponse = await fetch('https://online-voting-ulpa.onrender.com/api/candidate');
 
         if (!electionResponse.ok || !candidateResponse.ok) {
           throw new Error('Failed to fetch data');
@@ -57,7 +57,7 @@ const CandidatesPage = () => {
 
   const handleDeleteCandidate = async (candidateId) => {
     try {
-      const response = await fetch(`http://localhost:5000/api/candidate/${candidateId}`, {
+      const response = await fetch(`https://online-voting-ulpa.onrender.com/api/candidate/${candidateId}`, {
         method: 'DELETE',
         headers: {
           'Content-Type': 'application/json',

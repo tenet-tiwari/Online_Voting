@@ -10,7 +10,7 @@ const QueryPage = () => {
 
   useEffect(() => {
     // Fetch the queries from the database, sorted by time (latest first)
-    axios.get('http://localhost:5000/api/query',{
+    axios.get('https://online-voting-ulpa.onrender.com/api/query',{
       headers: {
             'Authorization': `Bearer ${localStorage.getItem('token')}`, // Include token if required
           },
@@ -43,7 +43,7 @@ const QueryPage = () => {
   const handleDelete = (queryId) => {
     //Delete the query from the database
     if (window.confirm(`Are you sure you want to delete this query?`)){
-    axios.delete(`http://localhost:5000/api/query/del/${queryId}`,{
+    axios.delete(`https://online-voting-ulpa.onrender.com/api/query/del/${queryId}`,{
       headers: {
         'Authorization': `Bearer ${localStorage.getItem('token')}`, // Include token if required
       },

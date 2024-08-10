@@ -10,7 +10,7 @@ const Footer = () => {
 
   const onSubmit = async (data) => {
     try {
-      let response = await fetch('http://localhost:5000/api/query/submit', {
+      let response = await fetch('https://online-voting-ulpa.onrender.com/api/query/submit', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

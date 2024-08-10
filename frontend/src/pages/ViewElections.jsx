@@ -11,7 +11,7 @@ const ViewElections = () => {
     // Fetch data from the backend when the component mounts
     const fetchElections = async () => {
       try {
-        const response = await fetch('http://localhost:5000/api/election');
+        const response = await fetch('https://online-voting-ulpa.onrender.com/api/election');
         const data = await response.json();
         setElectionsData(data);
       } catch (error) {
@@ -30,7 +30,7 @@ const ViewElections = () => {
     try {
       // Send a DELETE request to the backend to delete the election
       if (window.confirm(`Are you sure you want to delete ${name}?`)) {
-      const response = await fetch(`http://localhost:5000/api/election/${id}`, {
+      const response = await fetch(`https://online-voting-ulpa.onrender.com/api/election/${id}`, {
         method: 'DELETE',
       });
 

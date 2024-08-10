@@ -27,7 +27,7 @@ const UserDashboard = () => {
          
         // console.log(userId);
         // Fetch all users from the backend
-        const response = await axios.get('http://localhost:5000/api/auth', {
+        const response = await axios.get('https://online-voting-ulpa.onrender.com/api/auth', {
           headers: {
             Authorization: `Bearer ${token}`, // Include token in the headers
           },

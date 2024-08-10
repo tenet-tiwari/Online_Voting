@@ -13,7 +13,7 @@ const UpcomingElectionsPage = () => {
   useEffect(() => {
     const fetchElectionsData = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/api/election'); // Replace with your API endpoint
+        const response = await axios.get('https://online-voting-ulpa.onrender.com/api/election'); // Replace with your API endpoint
         setElectionsData(response.data);
       } catch (err) {
         setError('Failed to fetch elections data');
@@ -80,7 +80,7 @@ export default UpcomingElectionsPage;
 //   useEffect(() => {
 //     const fetchElectionsData = async () => {
 //       try {
-//         const response = await axios.get('http://localhost:5000/api/election');
+//         const response = await axios.get('https://online-voting-ulpa.onrender.com/api/election');
 //         setElectionsData(response.data);
 //       } catch (err) {
 //         setError('Failed to fetch elections data');

@@ -11,7 +11,7 @@ const femaleVoters = () => {
   useEffect(() => {
     const fetchfemaleVoters = async () => {
       try {
-        const response = await fetch('http://localhost:5000/api/auth/users',
+        const response = await fetch('https://online-voting-ulpa.onrender.com/api/auth/users',
           {
             headers: {
           'Authorization': `Bearer ${localStorage.getItem('token')}`, // Include token if required

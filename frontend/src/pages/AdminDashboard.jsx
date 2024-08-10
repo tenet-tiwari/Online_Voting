@@ -37,7 +37,7 @@ const AdminDashboard = () => {
   useEffect(() => {
     const fetchUsers = async () => {
       try {
-        const response = await fetch('http://localhost:5000/api/auth/users', {
+        const response = await fetch('https://online-voting-ulpa.onrender.com/api/auth/users', {
           headers: {
             'Authorization': `Bearer ${localStorage.getItem('token')}`, 
           },
@@ -58,7 +58,7 @@ const AdminDashboard = () => {
 
     const fetchElections = async () => {
       try {
-        const response = await fetch('http://localhost:5000/api/election');
+        const response = await fetch('https://online-voting-ulpa.onrender.com/api/election');
         const data = await response.json();
         setElections(data);
         setSelectedElection(data.length > 0 ? data[0]._id : '');
@@ -69,7 +69,7 @@ const AdminDashboard = () => {
 
     const fetchVotes = async () => {
       try {
-        const response = await fetch('http://localhost:5000/api/vote/all', {
+        const response = await fetch('https://online-voting-ulpa.onrender.com/api/vote/all', {
           headers: {
             'Authorization': `Bearer ${localStorage.getItem('token')}`, 
           },
@@ -89,7 +89,7 @@ const AdminDashboard = () => {
   useEffect(() => {
     const fetchCandidates = async () => {
       try {
-        const response = await fetch('http://localhost:5000/api/candidate');
+        const response = await fetch('https://online-voting-ulpa.onrender.com/api/candidate');
         const data = await response.json();
 
         const filteredCandidates = data.filter(candidate => candidate.election && candidate.election._id === selectedElection);

@@ -21,7 +21,7 @@ const VotePage = () => {
 
     const fetchCandidates = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/api/candidate');
+        const response = await axios.get('https://online-voting-ulpa.onrender.com/api/candidate');
         const allCandidates = response.data;
         const filteredCandidates = allCandidates.filter(
           (candidate) => candidate.election && candidate.election._id === electionId
@@ -42,7 +42,7 @@ const VotePage = () => {
 
     try {
       const response = await axios.post(
-        'http://localhost:5000/api/vote/cast',
+        'https://online-voting-ulpa.onrender.com/api/vote/cast',
         {
           electionId,
           candidateId,

@@ -43,7 +43,7 @@ const EditProfilePage = () => {
 
     try {
       // Send the data to the backend
-      await axios.put('http://localhost:5000/api/edit/profile', data, {
+      await axios.put('https://online-voting-ulpa.onrender.com/api/edit/profile', data, {
         headers: {
           'Content-Type': 'multipart/form-data',
           'Authorization': `Bearer ${localStorage.getItem('token')}`, // Include token if required

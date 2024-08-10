@@ -26,7 +26,7 @@ const AddElectionPage = () => {
       const token = localStorage.getItem('token'); // Get token from local storage
 
       const response = await axios.post(
-        'http://localhost:5000/api/election/add', // Your backend endpoint
+        'https://online-voting-ulpa.onrender.com/api/election/add', // Your backend endpoint
         electionData,
         {
           headers: {

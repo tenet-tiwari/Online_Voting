@@ -37,7 +37,7 @@
 //     }
 
 //     try {
-//       const response = await fetch('http://localhost:5000/api/auth/login', {
+//       const response = await fetch('https://online-voting-ulpa.onrender.com/api/auth/login', {
 //         method: 'POST',
 //         headers: {
 //           'Content-Type': 'application/json',
@@ -210,7 +210,7 @@ const LoginPage = () => {
     }
 
     try {
-      const response = await fetch('http://localhost:5000/api/auth/login', {
+      const response = await fetch('https://online-voting-ulpa.onrender.com/api/auth/login', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
